@@ -1,0 +1,14 @@
+<div class="bg-light text-center">
+    <h5>Products Selected:</h5>
+<p>
+    <span class="text-danger" *ngFor="let title of productsSentByChild"> ->{{title}}<- </span>
+</p>
+</div>
+<div class="body">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 mt-5 mb-5">
+            <div class="col mt-5 d-block" *ngFor="let prObj of products">
+                <app-product-details [ProductObj]=prObj (myEvent)="getProductDetailsFromChild($event)">
+                </app-product-details>
+            </div>
+        </div>
+</div>

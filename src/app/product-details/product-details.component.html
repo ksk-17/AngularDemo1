@@ -1,0 +1,11 @@
+<div class="card text-center shadow">
+  <div class="card-header" height="150px"><strong>{{ProductObj.title}}</strong></div>
+  <div class="card-body">
+      <img src={{ProductObj.img}}>
+      <p>{{ProductObj.title}}</p>
+      <p>{{ProductObj.price}}</p>
+  </div>
+  <div class="card-footer">
+    <button class="btn bg-primary" (click)="sendProductDetailsToParent(ProductObj.title)">Add to cart</button>
+  </div>
+</div>
