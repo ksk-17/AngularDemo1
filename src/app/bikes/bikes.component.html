@@ -1,0 +1,25 @@
+  
+<div class="bg-light text-center">
+    <h5>Products Selected Are:</h5>
+    
+<p class="bg-dark">
+    <span class="text-white" *ngFor="let title of productsSelected">  ->{{title}}<-  </span>
+</p>
+</div>
+<div class="body">
+        <div class="row row-cols-1 row-cols-sm-2 mt-5 mb-5">
+            <div class="col d-flex align-items-stretch mt-5" *ngFor="let prObj of products">
+                <div class="card text-center shadow">
+                    <div class="card-header"><strong>{{prObj.title}}</strong></div>
+                    <div class="card-body">
+                        <img class= 'w-100' src={{prObj.img}}>
+                        <p>{{prObj.title}}</p>
+                        <p>{{prObj.price}}</p>
+                    </div>
+                    <div class="card-footer">
+                      <button class="btn bg-primary" (click)="SelectProducts(prObj.title)">Add to cart</button>
+                    </div>
+                  </div>
+            </div>
+        </div>
+</div>
