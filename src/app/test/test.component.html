@@ -1,0 +1,68 @@
+<div class="container-fluid">
+    <table class="table text-center bg-light mt-3 table-striped w-100">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Phone</th>
+                <th>Website</th>
+                <th>Company</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let userObj of Users">
+                <td>{{userObj.id}}</td>
+                <td>{{userObj.name}}</td>
+                <td>{{userObj.username}}</td>
+                <td>{{userObj.email}}</td>
+                <td>
+                    <p class="bg-warning"><strong>Street</strong></p>
+                    <p>{{userObj.address.street}}</p>
+                    <p class="bg-danger"><strong>Suite</strong></p>
+                    <p>{{userObj.address.suite}}</p>
+                    <p style="background-color: hotpink;"><strong>City</strong></p>
+                    <p>{{userObj.address.city}}</p>
+                    <p style="background-color: skyblue;"><strong>Zipcode</strong></p>
+                    <p>{{userObj.address.zipcode}}</p>
+                    <p style="background-color: greenyellow;"><strong>Latitude</strong></p>
+                    <p>{{userObj.address.geo.lat}}</p>
+                    <p style="background-color: plum;"><strong>Longitude</strong></p>
+                    <p>{{userObj.address.geo.lng}}</p>
+                </td>
+                <td>{{userObj.phone}}</td>
+                <td>{{userObj.website}}</td>
+                <td>
+                    <p style="background-color:tomato;"><strong>Name</strong></p>
+                    <p>{{userObj.company.name}}</p>
+                    <p style="background-color:lightslategrey;"><strong>Catchphrase</strong></p>
+                    <p>{{userObj.company.catchPhrase}}</p>
+                    <p style="background-color:yellow"><strong>Bs</strong></p>
+                    <p>{{userObj.company.bs}}</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table text-center bg-light mt-3 table-striped w-100">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Year</th>
+                <th>Color</th>
+                <th>Pantone_value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let dataObj of Data['data']">
+                <td>{{dataObj.id}}</td>
+                <td>{{dataObj.name}}</td>
+                <td>{{dataObj.year}}</td>
+                <td style="background-color: {{dataObj.color}};">{{dataObj.color}}</td>
+                <td>{{dataObj.pantone_value}}</td>   
+            </tr>
+        </tbody>
+    </table>
+</div>

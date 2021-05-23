@@ -12,6 +12,8 @@ import { FormsModule } from '@angular/forms';
 import { MobilesComponent } from './mobiles/mobiles.component';
 import { TelevisionComponent } from './television/television.component';
 import { BikesComponent } from './bikes/bikes.component';
+import { TestComponent } from './test/test.component';
+import {HttpClientModule} from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -24,12 +26,14 @@ import { BikesComponent } from './bikes/bikes.component';
     ProductsComponent,
     MobilesComponent,
     TelevisionComponent,
-    BikesComponent
+    BikesComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
