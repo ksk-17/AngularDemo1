@@ -12,8 +12,9 @@ import { FormsModule } from '@angular/forms';
 import { MobilesComponent } from './mobiles/mobiles.component';
 import { TelevisionComponent } from './television/television.component';
 import { BikesComponent } from './bikes/bikes.component';
-import { TestComponent } from './test/test.component';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import { UserComponent } from './user/user.component';
+import { UserDetailsComponent } from './user-details/user-details.component'
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import {HttpClientModule} from '@angular/common/http'
     MobilesComponent,
     TelevisionComponent,
     BikesComponent,
-    TestComponent
+    UserComponent,
+    UserDetailsComponent,
   ],
   imports: [
     BrowserModule,

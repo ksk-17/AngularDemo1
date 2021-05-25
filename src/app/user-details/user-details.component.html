@@ -1,0 +1,69 @@
+<div class="container">
+    <table class="table table-bordered text-center border-dark mt-5">
+        <tbody>
+            <tr>
+                <th colspan="2">Id</th>
+                <td>{{user.id}}</td>
+            </tr>
+            <tr>
+                <th colspan="2">Name</th>
+                <td>{{user.name}}</td>
+            </tr>
+            <tr>
+                <th colspan="2">Username</th>
+                <td>{{user.username}}</td>
+            </tr>
+            <tr>
+                <th colspan="2">Email</th>
+                <td>{{user.email}}</td>
+            </tr>
+            <tr>
+                <th rowspan="4">Address</th>
+                <th>Street</th>
+                <td>{{user.address.street}}</td>
+            </tr>
+            <tr>
+                <th>Suite</th>
+                <td>{{user.address.suite}}</td>
+            </tr>
+            <tr>
+                <th>City</th>
+                <td>{{user.address.city}}</td>
+            </tr>
+            <tr>
+                <th>ZipCode</th>
+                <td>{{user.address.zipcode}}</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Geographic Location</th>
+                <th>Latitude</th>
+                <td>{{user.address.geo.lat}}</td>
+            </tr>
+            <tr>
+                <th>Longitude</th>
+                <td>{{user.address.geo.lng}}</td>
+            </tr>
+            <tr>
+                <th colspan="2">Phone</th>
+                <td>{{user.phone}}</td>
+            </tr>
+            <tr>
+                <th colspan="2">Website</th>
+                <td>{{user.website}}</td>
+            </tr>
+            <tr>
+                <th rowspan="3">Company</th>
+                <th>Name</th>
+                <td>{{user.company.name}}</td>
+            </tr>
+            <tr>
+                <th>CatchPhrase</th>
+                <td>{{user.company.catchPhrase}}</td>
+            </tr>
+            <tr>
+                <th>Bs</th>
+                <td>{{user.company.bs}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

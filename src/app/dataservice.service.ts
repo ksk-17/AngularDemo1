@@ -6,11 +6,11 @@ import { User } from 'src/models/user.model';
 @Injectable({
   providedIn: 'root'
 })
-export class ApiDataService {
+export class DataserviceService {
 
   constructor(private hc:HttpClient) { }
-  getUsers():Observable<User[]>{
-    return this.hc.get<User[]>('http://localhost:3000/mobiles');
+  getUsersById(id):Observable<User>{
+    return this.hc.get<User>('http://localhost:3000/mobiles/'+id);
   }
 
 }
